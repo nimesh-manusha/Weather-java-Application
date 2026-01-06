@@ -1,54 +1,81 @@
-🌦️ Weather Java Application
-A sleek and interactive Desktop Weather Application built using Java and Swing. This application allows users to search for any city worldwide and get real-time weather updates, including temperature, weather conditions, humidity, and wind speed.
+# 🌦️ Weather Java Application
 
-🚀 Features
-Real-time Data: Fetches live weather information using external APIs.
+A sleek and interactive Desktop Weather Application built using **Java** and **Swing**. This application allows users to search for any city worldwide and get real-time weather updates, including temperature, weather conditions, humidity, and wind speed.
 
-Search Functionality: Search for any city or location globally.
+---
 
-Dynamic UI: Displays custom weather icons based on the current weather (Clear, Cloudy, Rain, Snow).
+## ✨ Features
 
-Comprehensive Details: Shows temperature (Celsius), humidity levels, and wind speed.
+* **Real-time Data:** Fetches live weather information using external APIs.
+* **Search Functionality:** Search for any city or location globally.
+* **Dynamic UI:** Displays custom weather icons based on the current weather (Clear, Cloudy, Rain, Snow).
+* **Comprehensive Details:** Shows temperature (Celsius), humidity levels, and wind speed.
+* **User-Friendly Interface:** Modern and intuitive GUI built with Java Swing.
 
-User-Friendly Interface: Modern and intuitive GUI built with Java Swing.
+---
 
-🛠️ Technologies Used
-Language: Java
+## 🛠️ Technologies Used
 
-GUI Framework: Swing & AWT
+* **Language:** Java
+* **GUI Framework:** Swing & AWT
+* **JSON Parsing:** `json-simple` library
+* **API:** [Open-Meteo](https://open-meteo.com/) (for Weather data and Geocoding)
 
-JSON Parsing: json-simple library
+---
 
-API: Open-Meteo (or Geocoding API for location data)
+## 📂 Project Structure
 
-Tooling: Java HTTP client for network requests.
+| File | Description |
+| :--- | :--- |
+| **AppLauncher.java** | The main entry point to launch the application. |
+| **WeatherAppGui.java** | Handles the visual layout, components, and user interactions. |
+| **WeatherApp.java** | Backend logic for fetching data, API calls, and JSON parsing. |
+| **assets/** | Folder containing images and weather icons. |
 
-📂 Project Structure
-AppLauncher.java: The entry point of the application.
+---
 
-WeatherAppGui.java: Handles the visual components and user interactions.
+## 🚀 Installation & Setup
 
-WeatherApp.java: Contains the backend logic for API calls and data processing.
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/nimesh-manusha/Weather-java-Application.git](https://github.com/nimesh-manusha/Weather-java-Application.git)
+    ```
 
-🔧 Installation & Setup
-Clone the Repository
+2.  **Add Dependencies**
+    * Download the `json-simple` JAR file.
+    * Add it to your project's Build Path in your IDE (IntelliJ, Eclipse, or NetBeans).
 
-Bash
+3.  **Run the Application**
+    * Locate `AppLauncher.java` in the `src` folder.
+    * Right-click and select **Run**.
 
-git clone https://github.com/nimesh-manusha/Weather-java-Application.git
-Add Dependencies Make sure you have the json-simple library added to your project classpath to handle API responses.
+---
 
-Compile and Run Navigate to the src folder and run the AppLauncher class:
+## ⚙️ How It Works
 
-Bash
+1.  **Input:** User enters a city name in the search bar.
+2.  **Geocoding:** The app sends the city name to the Geocoding API to get Latitude and Longitude.
+3.  **Weather Fetch:** Using those coordinates, it requests weather data from the Open-Meteo API.
+4.  **Display:** The app parses the JSON response and updates the UI with the current temperature, weather description, humidity, and wind speed.
 
-javac AppLauncher.java
-java AppLauncher
-🖥️ Usage
-Launch the application.
+---
 
-Type the name of a city (e.g., "Colombo" or "London") in the search bar.
+## 🤝 Contributing
 
-Click the search icon.
+Contributions are welcome! If you have suggestions for new features or improvements, feel free to fork the repo and create a pull request.
 
-View the updated weather details and icons on the screen.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 👤 Author
+
+**Nimesh Manusha**
+* GitHub: [@nimesh-manusha](https://github.com/nimesh-manusha)
+
+---
+*Developed with ❤️ using Java*
